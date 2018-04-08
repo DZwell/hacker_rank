@@ -7,7 +7,7 @@ function amendTheSentence(string) {
 
     for (let i = 1; i < string.length; i++) {
         if (string[i] === string[i].toUpperCase()) {
-            const startingChar = string[startingPlace].toLowerCase();
+            startingChar = string[startingPlace].toLowerCase();
             newString += `${startingChar}${string.slice(startingPlace + 1, i)} `;
             startingPlace = i;
         }
@@ -17,4 +17,4 @@ function amendTheSentence(string) {
     return newString;
 }
 
-console.log(amendTheSentence('')); 
+console.log(amendTheSentence('ABCISCOOL')); 
