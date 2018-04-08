@@ -1,3 +1,7 @@
+/**
+ * Return given 2D array rotated 90 degrees
+ * @param {Array} a 
+ */
 function rotateImage(a) {
     // Deep copy original array
     const copy = JSON.parse(JSON.stringify(a));
