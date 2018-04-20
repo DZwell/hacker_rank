@@ -4,4 +4,5 @@ bin/
 share/
 pip-selfcheck.json
 .Python
+.vscode
 
