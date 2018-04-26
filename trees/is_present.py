@@ -4,18 +4,26 @@ class BSTreeNode:
         self.value = node_value
         self.left = self.right = None
 """
+from collections import deque
 
-def isPresent (root,val):
-    
-    if root.value == val:
-        return 1
-
-    if not root.right:
-        return root
-    
-    root = root.right
-
-    isPresent(root, val)
+def isPresent(root, val):
+    if root:
+        if root.value == val:
+            return 1
+        q = deque([root])
+        
+        while q:
+            if root.left:
+                if root.left.value == val:
+                    return 1
+                q.appendleft(root.left)
+            if root.right:
+                if root.right.value == val:
+                    return 1
+                q.appendleft(root.right)
+            root = q.pop()
+        return 0
+    return 0
 
     
     # write your code here

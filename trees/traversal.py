@@ -24,3 +24,31 @@ def breadth_first_search(t):
     return []
 
 
+
+'''
+class Node:
+      def __init__(self,info): 
+          self.info = info  
+          self.left = None  
+          self.right = None 
+           
+
+       // this is a node of the tree , which contains info as data, left , right
+'''
+def height(root):
+    if root:
+        stack = [root]
+        depth = 1
+        max_depth = 0
+
+        while stack:
+            if root.left:
+                stack.append(root.left)
+                depth += 1
+            elif root.right:
+                stack.append(root.right)
+            print(stack.pop())
+
+
+    
+
